@@ -1,0 +1,40 @@
+.Navigation {
+    max-width: 100%;
+
+    padding: 0;
+    margin: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.Navigation h1 {
+    color: aliceblue;
+    -webkit-text-stroke: 1px rgb(0,0,0);
+
+    font-size: 3rem;
+}
+
+.Links {
+    display: flex;
+    justify-content: space-between;
+
+    width: 200px;
+}
+
+.Links .linkbtn {
+    color: aliceblue;
+    -webkit-text-stroke: 1px rgb(0,0,0);
+
+    text-decoration: underline 0.1em rgba(0,0,0,0);
+    font-size: 1.5rem;
+
+    transition: all 0.3s ease-in-out;
+}
+
+.Links .linkbtn:hover {
+    color: lightblue;
+    text-decoration: underline 0.1em rgba(0,0,0,1);
+    scale: 1.1;
+}
