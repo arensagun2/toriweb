@@ -1,18 +1,25 @@
 // Modules
-
+import { useState } from 'react';
 // Components
 
 // Styles
 import './Navigation.css';
 
-export default function Navigation() {
+export default function Navigation(props) {
+    const [activePage, setActivePage] = useState("home");
+
+    const changeActive = (toPage) => {
+        setActivePage(toPage);
+        props.changePage(toPage);
+    }
+
     return(
         <div className='Navigation'>
             <h1>Victoria</h1>
 
             <div className='Links'>
-                <a className='linkbtn' href="">Home</a>
-                <a className='linkbtn' href="">Social</a>
+                <button className={activePage === "home" ? "linkbtn active" : "linkbtn"} onClick={() => changeActive("home")} >Home</button>
+                <button className={activePage === "social" ? "linkbtn active" : "linkbtn"} onClick={() => changeActive("social")} >Social</button>
             </div>
         </div>
     )

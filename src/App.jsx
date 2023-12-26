@@ -3,16 +3,25 @@ import { useState } from 'react'
 // Components
 import Navigation from './components/navigation/Navigation'
 import HomePage from './pages/homepage/HomePage'
+import SocialPage from './pages/socialpage/SocialPage'
+import Footer from './components/footer/Footer'
 // Styles
 import './App.css'
-import './components/navigation/Navigation.css'
 
 function App() {
+  const [page, setPage] = useState("home");
+
+  const changePage = (toPage) => {
+    setPage(toPage);
+  }
+
   return (
-    <>
-      <Navigation />
-      <HomePage />
-    </>
+    <div>
+      <Navigation changePage={changePage} />
+      {page === "home" && <HomePage />}
+      {page === "social" && <SocialPage />}
+      <Footer />
+    </div>
   )
 }
 

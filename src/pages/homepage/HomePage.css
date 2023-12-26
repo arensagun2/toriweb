@@ -1,0 +1,11 @@
+.HomePage {
+    display: flex;
+    flex-direction: column;
+}
+
+.HomePage h1 {
+    color: burlywood;
+    -webkit-text-stroke: 0.5px rgb(0,0,0);
+
+    font-size: 3rem;
+}
